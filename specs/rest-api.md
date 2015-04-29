@@ -5,7 +5,8 @@
 ### Sample Response:
 
 ```json
-{ "data": [
+{
+  "data": [
     {
         "type": "vehicle",
         "name": "553ac59934dff597a9708c71",
@@ -40,7 +41,8 @@
             }
         }
     }
-]}
+  ]
+}
 ```
  
 ## GET /vehicles/:id - Returns an array of size 1 with the vehicle which mataches :id
@@ -48,7 +50,8 @@
 ### Sample Response:
 
 ```json
-{ "data": [
+{
+  "data": [
     {
         "type": "vehicle",
         "name": "553ac59934dff597a9708c71",
@@ -66,7 +69,8 @@
             }
         }
     }
-]}
+  ]
+}
 ```
 
 # TRIPS
@@ -107,9 +111,9 @@
                 }
             ],
             "links": {
-                "self": "http://localhost:3000/vehicles/553ac59934dff597a9708c71/trip/acf3ba91-8ee0-4b64-814a-52df6bdad442",
+                "self": "http://localhost:3000//tripS/acf3ba91-8ee0-4b64-814a-52df6bdad442",
                 "driver": {
-                    "related":"http://localhost:3000/vehicles/553ac59934dff597a9708c71/trips/acf3ba91-8ee0-4b64-814a-52df6bdad442/driver"
+                    "related":"related":"http://localhost:3000/drivers/553ac59965094b476a817fa6"
                 }
             }
         },
@@ -192,6 +196,7 @@
                 "self": "http://localhost:3000/trips/acf3ba91-8ee0-4b64-814a-52df6bdad442",
                 "driver": {
                    "related":"http://localhost:3000/drivers/553ac59965094b476a817fa6"
+                }
             }
         },
         {
@@ -271,7 +276,7 @@
                 }
             ],
             "links": {
-                "self": "http://localhost:3000/vehicles/553ac59934dff597a9708c71/trip/acf3ba91-8ee0-4b64-814a-52df6bdad442",
+                "self": "http://localhost:3000/trip/acf3ba91-8ee0-4b64-814a-52df6bdad442",
                 "driver": {
                     "related":"http://localhost:3000/drivers/553ac59965094b476a817fa6"
                 }
@@ -289,12 +294,14 @@
     "data": [{
         "id": "553ac599580b76009c7bd482",
         "type": "driver",
-        "name": "Manning, Gilliam"
+        "name": "Manning, Gilliam",
+        "driver_score": 4.2
     },
     {
         "id": "553ac599580b76009c7bd483",
         "type": "driver",
-        "name": "Manning, Gil"
+        "name": "Manning, Gil",
+        "driver_score": 4.1
     }] 
 }
 ```
@@ -308,7 +315,8 @@
     "data": [{
         "id": "553ac599580b76009c7bd482",
         "type": "driver",
-        "name": "Manning, Gilliam"
+        "name": "Manning, Gilliam",
+        "driver_score": 4.4
     }] 
 }
 ```
